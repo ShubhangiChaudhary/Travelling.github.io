@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Travel</title>
+</head>
+<body>
+    <header>
+		<a href="#" class="brand">Travel</a>
+        <div class="navbar">
+		<div class="menu">
+			<ul>
+				<li><a href="#">Home</a></li>
+                <li><a href="#packages">Packages</a></li>
+				<li><a href="#book">Booking</a></li>
+				<li><a href="#services">Services</a></li>
+                <li><a href="#about">About us</a></li>
+				<li><a href="#review">Reviews</a></li>
+				<li><a href="#contact">Contact</a></li> 
+			</ul>
+		</div>
+        <div class="signup">
+			<!--<a href="#Page">Login</a>-->
+			<a href="#newsletter">Sign Up</a>
+
+		</div>
+        </div>
+    </header>
+
+            <section class="home">
+                <video class="video-slide active" src="Travelling/videos/Wander (1).mp4" autoplay muted loop></video>
+                <video class="video-slide" src="Travelling/videos/Hills (1) (1) (1).mp4" autoplay muted loop></video>
+                <video class="video-slide" src="Travelling/videos/Beach (1).mp4" autoplay muted loop></video>
+                <video class="video-slide" src="Travelling/videos/roadtrip (1) (1).mp4" autoplay muted loop></video>
+                <video class="video-slide" src="Travelling/videos/Southv (1).mp4" autoplay muted loop></video>
+                <video class="video-slide" src="Travelling/videos/Rajasthanv (1) (1) (1).mp4" autoplay muted loop></video>
+                <div class="content active">
+                    <h1>WANDERLUST</h1>
+                    <p>A strong desire for or impulse to wander or travel and explore the world.</p>
+                    <a href="https://www.holidify.com/collections/tourist-places-in-india" class="ab" target="popup">Explore more</a>
+                    
+                </div>
+                <div class="content">
+                    <h1>Hills<br>Stations</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolores ipsa saepe laboriosam iure temporibus cumque officiis veniam voluptatum! Quisquam ratione rerum similique ex id voluptates, voluptatem sunt debitis?
+                        Saepe nobis quidem quasi fuga id reiciendis, vitae harum doloremque?</p>
+                    <a href="https://www.holidify.com/collections/hill-stations-of-india" class="ab" target="popup">Explore more</a>
+                </div>
+                <div class="content">
+                    <h1>Beaches</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolores ipsa saepe laboriosam iure temporibus cumque officiis veniam voluptatum! Quisquam ratione rerum similique ex id voluptates, voluptatem sunt debitis?
+                    Saepe nobis quidem quasi fuga id reiciendis, vitae harum doloremque?</p>
+                    <a href="https://www.holidify.com/collections/best-beaches-in-india" class="ab" target="popup">Explore more</a>
+                </div>
+                <div class="content">
+                    <h1>Adventurous<br>RoadTrip</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolores ipsa saepe laboriosam iure temporibus cumque officiis veniam voluptatum! Quisquam ratione rerum similique ex id voluptates, voluptatem sunt debitis?
+                    Saepe nobis quidem quasi fuga id reiciendis, vitae harum doloremque?</p>
+                    <a href="https://www.holidify.com/collections/best-road-trip-india" class="ab" target="popup">Explore more</a>
+                </div>
+                <div class="content">
+                    <h1>Enjoy<br>the View</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolores ipsa saepe laboriosam iure temporibus cumque officiis veniam voluptatum! Quisquam ratione rerum similique ex id voluptates, voluptatem sunt debitis?
+                    Saepe nobis quidem quasi fuga id reiciendis, vitae harum doloremque?</p>
+                    <a href="https://www.holidify.com/collections/lake-riverside-places-in-south-india" class="ab" target="popup">Explore more</a>
+                </div>
+                <div class="content">
+                    <h1>Rajasthan</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolores ipsa saepe laboriosam iure temporibus cumque officiis veniam voluptatum! Quisquam ratione rerum similique ex id voluptates, voluptatem sunt debitis?
+                        Saepe nobis quidem quasi fuga id reiciendis, vitae harum doloremque?</p>
+                    <a href="https://www.holidify.com/state/rajasthan/top-destinations-places-to-visit.html" class="ab" target="popup">Explore more</a>
+                </div>
+                <div class="slider-navigation">
+                    <div class="nav-btn active"></div>
+                    <div class="nav-btn"></div>
+                    <div class="nav-btn"></div>
+                    <div class="nav-btn"></div>
+                    <div class="nav-btn"></div>
+                    <div class="nav-btn"></div>
+
+                </div>
+            </section>
+
+            <script>
+                const btns = document.querySelectorAll(".nav-btn");
+                const slides = document.querySelectorAll(".video-slide");
+                const contents = document.querySelectorAll(".content");
+
+
+
+                var sliderNav = function(manual){
+
+                    btns.forEach((btn) => {
+                        btn.classList.remove("active");
+                    });
+
+                    slides.forEach((slide) => {
+                        slide.classList.remove("active");
+                    });
+
+                    contents.forEach((content) => {
+                        content.classList.remove("active");
+                    });
+
+                    btns[manual].classList.add("active");
+                    slides[manual].classList.add("active");
+                    contents[manual].classList.add("active");
+
+
+                }
+
+                btns.forEach((btn, i) => {
+                    btn.addEventListener("click", () => {
+                        sliderNav(i);
+                    });
+                });
+            </script>
+
+            <!-- packages section starts  -->
+
+<section class="packages" id="packages">
+
+    <h1 class="heading">
+        <span>P</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <a href="https://www.holidify.com/collections/places-to-visit-in-south-india" target="popup">
+                <img src="Travelling/Images/South.jpg" alt="">
+            </a>
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> South India </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $90.00 <span>$120.00</span> </div>
+                <a href="#" class="btn">Book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <a href="https://www.holidify.com/state/rajasthan/top-destinations-places-to-visit.html" target="popup">
+                <img src="Travelling/Images/Rajasthan.jpg" alt="">
+            </a>
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Rajasthan </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $90.00 <span>$120.00</span> </div>
+                <a href="#" class="btn">Book now</a>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <a href="https://www.holidify.com/state/uttar-pradesh/top-destinations-places-to-visit.html" target="popup">
+                <img src="Travelling/Images/UP.jpg" alt="">
+            </a>
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Uttar Pradesh </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $90.00 <span>$120.00</span> </div>
+                <a href="#" class="btn">Book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <a href="https://www.holidify.com/state/madhya-pradesh/top-destinations-places-to-visit.html" target="popup">
+                <img src="Travelling/Images/MP.png" alt="">
+            </a>
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Madhya Pradesh </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $90.00 <span>$120.00</span> </div>
+                <a href="#" class="btn">Book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <a href="https://www.holidify.com/state/maharashtra-goa/top-destinations-places-to-visit.html" target="popup">
+                <img src="Travelling/Images/MH.jpg" alt="">
+            </a>
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Maharashtra </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $90.00 <span>$120.00</span> </div>
+                <a href="#" class="btn">Book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <a href="https://www.holidify.com/state/odisha/top-destinations-places-to-visit.html" target="popup">
+                <img src="Travelling/Images/Odisha.jpg" alt="">
+            </a>
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Odisha </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $90.00 <span>$120.00</span> </div>
+                <a href="#" class="btn">Book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <a href="https://www.holidify.com/state/jammu-and-kashmir/top-destinations-places-to-visit.html" target="popup">
+                <img src="Travelling/Images/jammu.jpg" alt="">
+            </a>
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Jammu & Kashmir </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $90.00 <span>$120.00</span> </div>
+                <a href="#" class="btn">Book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <a href="https://www.holidify.com/state/himachal-pradesh/top-destinations-places-to-visit.html" target="popup">
+                <img src="Travelling/Images/HP.jpg" alt="">
+            </a>
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Himachal Pradesh </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $90.00 <span>$120.00</span> </div>
+                <a href="#" class="btn">Book now</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- packages section ends -->
+
+            
+            <section class="book" id="book">
+
+                <div class="heading">
+                    <h1>Book Now</h1>
+                </div>
+                <div class="row">
+            
+                    <form action="">
+                        <div class="inputBox">
+                            <h3>Where To</h3>
+                            <input type="text" placeholder="Place Name">
+                        </div>
+                        <div class="inputBox">
+                            <h3>How Many</h3>
+                            <input type="number" placeholder="Number of Guests">
+                        </div>
+                        <div class="inputBox">
+                            <h3>Arrivals</h3>
+                            <input type="date">
+                        </div>
+                        <div class="inputBox">
+                            <h3>Leaving</h3>
+                            <input type="date">
+                        </div>
+                        <a href="#"><button class="btn">Book Now</button></a>
+                    </form>
+                </div>
+            
+            </section>
+
+            
+<!-- services section starts  -->
+
+<section class="services" id="services">
+    <h1 class="heading"><span>S</span>ervices</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-hotel"></i>
+            <h3>Affordable Hotels</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>Food and Drinks</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Safety Guide</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-globe-asia"></i>
+            <h3>Around The World</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-plane"></i>
+            <h3>Fastest Travel</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-hiking"></i>
+            <h3>Adventures</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<section id="about" class="about">
+
+    <h1 class="heading"><span>A</span>bout <span>U</span>s</h1>
+    
+    <div class="row">
+    
+        <div class="image">
+            <img src="Travelling/Images/wel.jpg" alt="">
+        </div>
+    
+        <div class="content">
+            <h3>Why choose us?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quam aut tenetur quaerat omnis perferendis nesciunt quidem odit quod! Ex excepturi temporibus iste assumenda, odio magnam laudantium minus asperiores distinctio!<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, itaque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quam aut tenetur quaerat omnis perferendis nesciunt quidem odit quod! Ex excepturi temporibus iste assumenda, odio magnam laudantium minus asperiores distinctio!</p>
+            <a href="#"><button class="btn btn1">Read more</button></a>
+        </div>
+    
+    </div>
+    
+    </section>
+
+    <section id="review" class="review">
+
+        <h1 class="heading"><span>R</span>eview</h1>
+        
+        
+        <div class="box-container">
+        
+            <div class="box">
+                <div class="image">
+                    <img src="Travelling/Images/jkmask.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Jeon Marvel</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ex labore odio fuga doloremque sequi in asperiores ea, nisi ullam?</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="box">
+                <div class="image">
+                    <img src="Travelling/Images/nam.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Vikram Oberoi</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ex labore odio fuga doloremque sequi in asperiores ea, nisi ullam?</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="box">
+                <div class="image">
+                    <img src="Travelling/Images/vmask.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Kim Tae</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ex labore odio fuga doloremque sequi in asperiores ea, nisi ullam?</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </section>
+
+        <section id="contact" class="contact">
+
+            <h1 class="heading"><span>C</span>ontact <span>U</span>s</h1>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.960043043403!2d72.85186461442511!3d19.109408755888396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8348740e791%3A0xe302e2dd9ab8bae2!2sTravels%20Booking%20Office!5e0!3m2!1sen!2sin!4v1609421049401!5m2!1sen!2sin" width="100%" height="300" frameborder="0" style="border:0; outline:none;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            
+            <div class="row">
+            
+            <div class="contact-info">
+            
+                <div class="box">
+                    <h3> <i class="fa fa-home"></i> Address </h3>
+                    <p>Mumbai, <br>
+                    Maharashtra, <br>
+                    400104.</p>
+                </div>
+            
+                <div class="box">
+                    <h3> <i class="fa fa-envelope"></i> E-mail </h3>
+                    <p>xyz@gmail.com</p>
+                </div>
+            
+                <div class="box">
+                    <h3> <i class="fa fa-phone"></i> Phone </h3>
+                    <p>+123 4567 890</p>
+                </div>
+            
+            </div>
+            
+            <div class="contact-form-container">
+            
+                <form action="">
+            
+                    <h3>Get In Touch</h3>
+            
+                    <div class="inputBox">
+                        <input type="text" placeholder="Full name"> 
+                        <input type="email" placeholder="E-mail">
+                    </div>
+            
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            
+                    <input type="submit" value="Message">
+            
+                </form>
+            
+            </div>
+            </div>
+            </section>
+            
+            <!-- contact section ends -->
+
+            <section class="newsletter" id="newsletter">
+            
+                <h1>Sign Up</h1>
+                
+                <form action="">
+                    
+                    <input type="Full Name" placeholder="Enter Your Name"><br>
+                    <input type="email" placeholder="Enter Your Email"><br>
+                    <input type="Password" placeholder="Create Password"><br>
+                    <input type="submit" value="Sign Up">
+                </form>
+                
+                </section>
+                
+                <section class="footer">
+                
+                <h1 class="credit">Created By Group 1<br>1. Mahesh 2.Muskan 3.Pankaj 4.Samruddhi 5. Shubhangi</span></h1>
+                
+                <div class="icons">
+                    <a href="https://www.instagram.com/incredibleindia/?hl=en" target="popup" class="fab fa-instagram"></a>
+                    <a href="https://www.facebook.com/incredibleindia/"  target="popup" class="fab fa-facebook"></a>
+                </div>
+                
+                </section>
+
+    </body>
+</html>
